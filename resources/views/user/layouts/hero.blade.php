@@ -1,0 +1,49 @@
+ <section id="hero">
+    <div class="swiper slideshow">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"
+          style="background-image:url({{ asset('user/images/banner2.jpg') }}); background-repeat: no-repeat; background-position: center; height:950px;">
+          <div class="container padding-large">
+            <div class="row justify-content-end">
+              <div class="col-lg-6" data-aos="fade-up">
+                <h2 class="display-1 text-uppercase text-white mt-3">Reveal Your Beauty</h2>
+                <p class="text-capitalize text-white fs-5 mb-4">Discover Your Perfect Look With Premium Cosmetics</p>
+                <a href="#" class="btn btn-light">
+                  Shop Collection
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url({{ asset('user/images/banner1.jpg') }}); background-repeat: no-repeat; background-position: center; height:950px;">
+          <div class="container padding-large">
+            <div class="row justify-content-end">
+              <div class="col-lg-6" data-aos="fade-up">
+                <h2 class="display-1 text-uppercase text-white mt-3">Enhance Your Glow</h2>
+                <p class="text-capitalize text-white fs-5 mb-4">Illuminate Your Beauty With Premium Skincare</p>
+                <a href="#" class="btn btn-light">
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url({{ asset('user/images/banner3.jpg') }}); background-repeat: no-repeat; background-position: center; height:950px;">
+          <div class="container padding-large">
+            <div class="row justify-content-end">
+              <div class="col-lg-6" data-aos="fade-up">
+                <h2 class="display-1 text-uppercase text-white mt-3">Define Your Beauty</h2>
+                <p class="text-capitalize text-white fs-5 mb-4">Transform Your Look With Luxury Cosmetics</p>
+                <a href="#" class="btn btn-light">
+                  Explore Products
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-slideshow"></div>
+    </div>
+  </section>
