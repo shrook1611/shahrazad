@@ -23,6 +23,8 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
+           
+            
         ]);
 
         // Create a new user
@@ -30,6 +32,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            
         ]);
         Auth::login($user);
         // Redirect to the login page

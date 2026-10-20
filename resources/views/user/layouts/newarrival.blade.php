@@ -22,10 +22,13 @@
                         </div>
                         <div class="cart-concern">
                             <div class="cart-button d-flex justify-content-between align-items-center">
-                                <a href="#"
+                                <form action="{{ route('addToCart', $product->id) }}" method="POST">
+                                    @csrf
+                                <button type='submit' 
                                     class="btn-wrap cart-link d-flex align-items-center text-capitalize fs-6 ">add to
                                     cart <i class="icon icon-arrow-io pe-1"></i>
-                                </a>
+                                </button>
+                                </form>
                                 <a href="single-product.html" class="view-btn mt-1">
                                     <i class="icon icon-screen-full"></i>
                                 </a>
@@ -50,7 +53,7 @@
 
         </div>
         <div class="text-center mt-5 pt-4">
-            <button type="submit" class="btn btn-primary">View All Products</button>
+            <a href="{{ route('allproducts') }}" type="submit" class="btn btn-primary">View All Products</a>
         </div>
     </div>
 </section>

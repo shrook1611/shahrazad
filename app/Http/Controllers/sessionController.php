@@ -17,7 +17,7 @@ class sessionController extends Controller
     public function logout()
     {
         auth()->logout();
-        return redirect('/')->with('success', 'Logged out successfully.');
+        return redirect('login')->with('success', 'Logged out successfully.');
     }
 
 
@@ -33,7 +33,7 @@ class sessionController extends Controller
      
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-        return redirect('/')->with('success', 'Logged in successfully.');
+        return redirect('home')->with('success', 'Logged in successfully.');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',

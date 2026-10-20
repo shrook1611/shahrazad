@@ -3,11 +3,25 @@
   position: fixed;  right: 20px;
 bottom: 20px;
   z-index: 9999;
+    transition: opacity 0.5s ease;
+
 }
 </style>
 
 
+<script>
+    setTimeout(function () {
+        const toast = document.querySelector('.toast');
 
+        if (toast) {
+            toast.style.opacity = '0';
+
+            setTimeout(function () {
+                toast.remove();
+            }, 500);
+        }
+    }, 3000);
+</script>
 
 
 

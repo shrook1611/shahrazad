@@ -245,7 +245,7 @@
 
             </div>
             <div class="text-center mt-5 pt-4">
-                <button type="submit" class="btn btn-primary">View All Products</button>
+                <a href="{{ route('allproducts') }}" type="submit" class="btn btn-primary">View All Products</a>
             </div>
         </div>
     </section>

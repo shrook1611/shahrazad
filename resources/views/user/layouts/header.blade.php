@@ -12,7 +12,7 @@
   <meta name="keywords" content="eCommerce, Beauty Store, HTML, Website Template">
   <meta name="description" content="SHARZAD is an eCommerce Beauty Store HTML Website Template">
 </head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 <link rel="stylesheet" type="text/css" href="{{ asset('user/icomoon/icomoon.css') }}">

@@ -184,13 +184,13 @@
               </a>
             </li>
       <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{route('users.index')}}">
                 <span class="menu-title">Users</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
                <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{route('admin.orders.index')}}">
                 <span class="menu-title">Orders</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>

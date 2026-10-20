@@ -68,72 +68,17 @@
       </div>
   </div>
   {{-- offcanvs for cart --}}
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart"
-      aria-labelledby="My Cart">
-      <div class="offcanvas-header justify-content-center">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-          <div class="order-md-last">
-              <h4 class="d-flex justify-content-between align-items-center mb-4">
-                  <span class="text-primary">Your cart</span>
-                  <span class="badge bg-primary rounded-circle pt-2">3</span>
-              </h4>
 
-              <ul class="list-group mb-4">
-                  <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                          <h6 class="my-0">Red Sunglasses</h6>
-                          <small class="text-body-secondary">Brief description</small>
-                      </div>
-                      <span class="text-body-secondary">$120</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                          <h6 class="my-0">Reading Glasses</h6>
-                          <small class="text-body-secondary">Brief description</small>
-                      </div>
-                      <span class="text-body-secondary">$80</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                          <h6 class="my-0">Fashion Glasses</h6>
-                          <small class="text-body-secondary">Brief description</small>
-                      </div>
-                      <span class="text-body-secondary">$50</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between">
-                      <span class="fw-bold">Total (USD)</span>
-                      <strong>$250</strong>
-                  </li>
-              </ul>
+@include('user.cart')
 
-              <button class="w-100 btn btn-dark" type="submit">Continue to checkout</button>
-          </div>
-      </div>
-  </div>
+
+
   {{-- offcanvas for search --}}
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
-      aria-labelledby="Search">
-      <div class="offcanvas-header justify-content-center">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
+ 
+@include('user.search')
 
-          <div class="order-md-last">
-              <h4 class="text-primary text-uppercase mb-3">
-                  Search
-              </h4>
-              <div class="search-bar border rounded-2 border-dark-subtle">
-                  <form id="search-form" class="text-center d-flex align-items-center" action=""
-                      method="">
-                      <input type="text" class="form-control border-0 bg-transparent" placeholder="Search Here" />
-                      <iconify-icon icon="tabler:search" class="fs-4 me-3"></iconify-icon>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
+
+
 
   <nav class="main-menu navbar navbar-expand-lg fixed-top navbar-dark py-2 py-lg-3">
       <div class="container-fluid px-3 px-md-4">
@@ -154,7 +99,7 @@
                   <iconify-icon icon="mdi:cart" class="fs-5 text-light"></iconify-icon>
                   <span
                       class="position-absolute top-0 start-100 translate-middle badge rounded-circle text-black bg-light p-1 badge-sm">
-                      03
+                      {{ $cart?->cartitems->count() }}
                   </span>
               </a>
               <a href="#" class="nav-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
@@ -197,6 +142,11 @@
                               <button type="submit" class="nav-link">Logout</button>
                           </form>
                       </li>
+                         <li class="nav-item">
+                          <a href="{{ route('orders.history') }}" class="nav-link">
+                              MY Orders
+                          </a>
+                      </li>
                   @endauth
 
               </ul>
@@ -215,7 +165,7 @@
                   <iconify-icon icon="mdi:cart" class="fs-5 text-light"></iconify-icon>
                   <span
                       class="position-absolute top-0 start-100 translate-middle badge rounded-circle text-black bg-light p-1 badge-sm">
-                      03
+                     {{ $cart?->cartitems->count() ?? 0 }}
                   </span>
               </a>
               <a href="#" class="nav-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"

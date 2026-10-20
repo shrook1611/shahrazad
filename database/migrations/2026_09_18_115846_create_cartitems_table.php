@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('cartitems', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+           $table->foreignId('cart_id')->constrained()->onDelete('cascade');
+             $table->integer('quantity');
+              $table->decimal('TotalPrice', 10, 2);
             $table->timestamps();
         });
     }
