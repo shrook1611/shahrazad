@@ -195,5 +195,17 @@
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
+                 <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.shipments.index')}}">
+                <span class="menu-title">Shipments</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.stock-movements.index')}}">
+                <span class="menu-title">Stock Movements</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
           </ul>
         </nav>

@@ -10,7 +10,9 @@ class AuthController extends Controller
 {
    
     public function create()
+
     {
+        
         return view('Auth.register');
     }
     public function store(Request $request)

@@ -166,7 +166,7 @@
                 <iconify-icon icon="mdi:cart" class="fs-5 text-light"></iconify-icon>
                 <span
                     class="position-absolute top-0 start-100 translate-middle badge rounded-circle text-black bg-light p-1 badge-sm">
-                 {{ $cart?->cartitems->count() ?? 0 }}
+               0
                 </span>
             </a>
             <a href="#" class="nav-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"

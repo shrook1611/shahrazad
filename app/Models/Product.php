@@ -22,9 +22,15 @@ public function category()
         return $this->belongsTo(category::class);
     }
 
+public function shipmentItems()
+{
+    return $this->hasMany(ShipmentItem::class);
+}
 
-
-
+public function stockMovements()
+{
+    return $this->hasMany(StockMovement::class);
+}
 
 
 

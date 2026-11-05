@@ -20,6 +20,7 @@
                                         <th>description</th>
                                         <th>price</th>
                                         <th>category</th>
+                                        <th>stock</th>
                                         <th>Created at</th>
                                         <th>Actions</th>
                                     </tr>
@@ -34,6 +35,7 @@
                                         <td>{{ $product->description }}</td>
                                         <td>${{ $product->price }}</td>
                                         <td>{{ $product->category->name }}</td>
+                                        <td>{{ $product->stock }}</td>
                                         <td>{{ $product->created_at->format('d M Y') }}</td>
                                         <td>
                                             <a href="{{ route('product.edit', $product->id) }}" class="btn btn-sm btn-primary">Edit</a>

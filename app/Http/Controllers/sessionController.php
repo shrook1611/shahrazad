@@ -31,10 +31,20 @@ class sessionController extends Controller
             'password' => ['required'],
         ]);
      
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-        return redirect('home')->with('success', 'Logged in successfully.');
+
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+
+        if (Auth::user()->role === 'admin') {
+            return redirect()->route('dashboard')
+                ->with('success', 'Logged in successfully.');
         }
+
+        return redirect()->route('home')
+            ->with('success', 'Logged in successfully.');
+    }
+
+      
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
